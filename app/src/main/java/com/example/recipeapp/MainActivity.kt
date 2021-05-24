@@ -3,13 +3,18 @@ package com.example.recipeapp
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,16 +25,45 @@ class MainActivity : AppCompatActivity() {
         setContent {
 
             Column(
-                modifier = Modifier.padding(16.dp)
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .background(Color.DarkGray)
             ) {
-                Text(text = "Hello World!!!")
-                Spacer(modifier = Modifier.padding(top = 10.dp))
-                Button(onClick = { }) {
-                    Text(text = "A Button")
-                    Text(text = "A Button")
+                Image(
+                    painter = painterResource(id = R.drawable.happy_meal),
+                    contentDescription = null,
+                    modifier = Modifier.height(300.dp),
+                    contentScale = ContentScale.Crop
+                )
+
+
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        text = "Happy Meal", fontSize = 26.sp
+                    )
+                    Spacer(modifier = Modifier.padding(top = 10.dp))
+                    Text(
+                        text = "800 Calories", fontSize = 17.sp
+                    )
+                    Spacer(modifier = Modifier.padding(top = 10.dp))
+                    Text(text = "$5.99", fontSize = 17.sp, color = Color(0xFF85bb65))
                 }
 
             }
+
+
+//            Column(
+//                modifier = Modifier.padding(16.dp)
+//            ) {
+//                Text(text = "Hello World!!!")
+//                Spacer(modifier = Modifier.padding(top = 10.dp))
+//                Button(onClick = { }) {
+//                    Text(text = "A Button")
+//                }
+//
+//            }
+
 
         }
 
