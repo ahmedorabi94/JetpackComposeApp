@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
                 Spacer(modifier = Modifier.padding(top = 10.dp))
                 Button(onClick = { }) {
                     Text(text = "A Button")
+                    Text(text = "A Button")
                 }
 
             }
