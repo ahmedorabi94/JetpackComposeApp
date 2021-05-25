@@ -21,68 +21,71 @@ import androidx.compose.ui.unit.sp
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //  setContentView(R.layout.activity_main)
 
+        setContentView(R.layout.activity_main)
 
-        setContent {
+//        supportFragmentManager.beginTransaction().replace(R.id.main_Container,RecipeListFragment())
+//            .commit()
 
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .verticalScroll(rememberScrollState())
-                    .background(Color.DarkGray)
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.happy_meal),
-                    contentDescription = null,
-                    modifier = Modifier.height(300.dp),
-                    contentScale = ContentScale.Crop
-                )
-
-
-                Column(modifier = Modifier.padding(16.dp)) {
-
-                    Row(
-                        modifier = Modifier.fillMaxSize(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-
-                    ) {
-                        Text(
-                            text = "Happy Meal", fontSize = 26.sp
-                        )
-
-                        Text(
-                            text = "$5.99",
-                            fontSize = 17.sp,
-                            color = Color(0xFF85bb65),
-                            modifier = Modifier.align(Alignment.CenterVertically)
-                        )
-
-                    }
-
-
-                    Spacer(modifier = Modifier.padding(top = 10.dp))
-                    Text(
-                        text = "800 Calories", fontSize = 17.sp
-                    )
-                    Spacer(modifier = Modifier.padding(top = 10.dp))
-
-
-                    Button(
-                        onClick = { },
-                        modifier = Modifier.align(Alignment.CenterHorizontally)
-
-                    ) {
-                        Text(text = "Order Now")
-                    }
-
-
-                }
-
-            }
-
-
-        }
+//        setContent {
+//
+//            Column(
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .verticalScroll(rememberScrollState())
+//                    .background(Color.DarkGray)
+//            ) {
+//                Image(
+//                    painter = painterResource(id = R.drawable.happy_meal),
+//                    contentDescription = null,
+//                    modifier = Modifier.height(300.dp),
+//                    contentScale = ContentScale.Crop
+//                )
+//
+//
+//                Column(modifier = Modifier.padding(16.dp)) {
+//
+//                    Row(
+//                        modifier = Modifier.fillMaxSize(),
+//                        horizontalArrangement = Arrangement.SpaceBetween
+//
+//                    ) {
+//                        Text(
+//                            text = "Happy Meal", fontSize = 26.sp
+//                        )
+//
+//                        Text(
+//                            text = "$5.99",
+//                            fontSize = 17.sp,
+//                            color = Color(0xFF85bb65),
+//                            modifier = Modifier.align(Alignment.CenterVertically)
+//                        )
+//
+//                    }
+//
+//
+//                    Spacer(modifier = Modifier.padding(top = 10.dp))
+//                    Text(
+//                        text = "800 Calories", fontSize = 17.sp
+//                    )
+//                    Spacer(modifier = Modifier.padding(top = 10.dp))
+//
+//
+//                    Button(
+//                        onClick = { },
+//                        modifier = Modifier.align(Alignment.CenterHorizontally)
+//
+//                    ) {
+//                        Text(text = "Order Now")
+//                    }
+//
+//
+//                }
+//
+//            }
+//
+//
+//        }
 
 
     }
